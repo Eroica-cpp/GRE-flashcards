@@ -5,7 +5,7 @@
 制作方法
 ----
 下载[pdf文件](https://github.com/Eroica-cpp/GRE-flashcards/blob/master/download/GRE-flashcards-all.pdf)，打印的时候设置一张A4纸打六页(正反面打印)，横向的顺序打印，即：
-|---|---|
+| --- | --- |
 | 1 | 2 |
 | 3 | 4 |
 | 5 | 6 |
@@ -17,3 +17,8 @@
 
 效果图
 ----
+* ![正面单词，背面中英文解释和例句](https://github.com/Eroica-cpp/GRE-flashcards/blob/master/image/card1.png)
+
+* ![从3000里面挑的1700个我不太熟悉的词，分成了12叠。](https://github.com/Eroica-cpp/GRE-flashcards/blob/master/image/card2.png)
+
+* ![背单词的时候认识的放一边，不认识的放另一边。](https://github.com/Eroica-cpp/GRE-flashcards/blob/master/image/card3.png)
