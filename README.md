@@ -4,8 +4,10 @@
 
 制作方法
 ----
-下载[pdf文件](https://github.com/Eroica-cpp/GRE-flashcards/blob/master/download/GRE-flashcards-all.pdf)，打印的时候设置一张A4纸打六页(正反面打印)，横向的顺序打印，即：
+* **步骤一：下载pdf文件** [GRE-flashcards-all.pdf](https://github.com/Eroica-cpp/GRE-flashcards/blob/master/download/GRE-flashcards-all.pdf)，
 
+* **步骤二： 打印这个pdf文件。**
+打印的时候设置一张A4纸打六页（正反面打印），横向的顺序打印，即：
 ```
 1 | 2
 -----
@@ -13,9 +15,9 @@
 -----
 5 | 6
 ```
-
 上面是一张A4的一面的结构，1-6表示pdf文件里面的页码。顺序都是程序调过的，按照上面的设置，正反面正好可以对上。
-打印店一般都有专门裁纸的机器，裁开即可。
+
+* **步骤三：裁剪。** 打印店一般都有专门裁纸的机器，裁开即可。
 
 多说一句，1700多个单词全部打印下来大概是500+面A4纸，一般打印店的价位也就是50+RMB，如果能背好单词还是很值的！
 
