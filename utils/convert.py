@@ -2,6 +2,12 @@
 template_font = r"""
 \begin{frame}
 \begin{center}
+\begin{turn}{180}
+{\fontsize{2.5cm}{1em}\selectfont %s}
+\end{turn}
+\vspace{1em}\par  
+\hrule
+\vspace{1em}\par  
 {\fontsize{2.5cm}{1em}\selectfont %s}
 \end{center}
 \end{frame}
@@ -38,7 +44,7 @@ def form_explanations(dic):
 
 def convert_one(word, dic, save_path):
 	# save font side
-	open(save_path+word+"_1.tex", "w").write(template_font % word)
+	open(save_path+word+"_1.tex", "w").write(template_font % (word,word))
 	
 	# save back side 
 	explanations = form_explanations(dic)

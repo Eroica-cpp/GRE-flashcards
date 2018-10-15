@@ -10,10 +10,11 @@ import os
 from load import *
 from convert import *
 
-def insert(cards_per_page):
+def insert(row,col):
 	"""
 	insert into tex source code
 	"""
+	cards_per_page=row*col
 	tex_name = "../src/content/cards.tex"
 	save_path1 = "../src/content/words/" # for main script
 	save_path2 = "./content/words/" # for cards.tex
@@ -26,11 +27,18 @@ def insert(cards_per_page):
 	for i in range(0, page_num): # skip left words at the end
 		words_group = words[i*cards_per_page : (i+1)*cards_per_page]
 		# this allocation algorithm is valid only if cards_per_page is six
-		order_list = words_group + [words_group[1], words_group[0], words_group[3], words_group[2], words_group[5], words_group[4]]
-
+		new_words_group=[]
+		for row_index in range(row):
+			new_row=[]
+			for col_index in range(col):
+				new_row.insert(0,words_group[row_index*col+col_index])
+			new_words_group.extend(new_row)
+		order_list = words_group + new_words_group
 		for j in range(0, 2*cards_per_page):
+			if j>=len(order_list):
+				break
 			word = order_list[j]
-			attach = "_1.tex}" if j <= 5 else "_2.tex}"
+			attach = "_1.tex}" if j <= cards_per_page-1 else "_2.tex}"
 			input_str = "\\input{" + save_path2 + word + attach
 			cmd = "echo '%s' >> %s" % (input_str, tex_name)
 			# debug module
@@ -43,11 +51,10 @@ def main():
 	source_path = "../data/"
 	save_path = "../src/content/words/"
 	tex_path = "../src/content/"
-	cards_per_page = 6
 
 	words = load(source_path)
 	convert(words, save_path)
-	insert(cards_per_page)
+	insert(3,3)
 	return 
 
 if __name__ == "__main__":
