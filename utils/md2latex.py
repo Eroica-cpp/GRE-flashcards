@@ -1,3 +1,4 @@
+# coding=utf-8
 """
 ************************************************************
 Author: Tao Li
@@ -48,13 +49,16 @@ def insert(row,col):
 
 def main():
 	## predefinition
+	print("本工具可以自定义行列数，根据给定的行列生成A4大小 R x M 的单词卡片")
+	row = input("输入行数：")
+	col = input("输入列数：")
 	source_path = "../data/"
 	save_path = "../src/content/words/"
 	tex_path = "../src/content/"
 
 	words = load(source_path)
 	convert(words, save_path)
-	insert(3,3)
+	insert(row,col)
 	return 
 
 if __name__ == "__main__":
