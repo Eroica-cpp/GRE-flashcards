@@ -3,12 +3,12 @@ template_font = r"""
 \begin{frame}
 \begin{center}
 \begin{turn}{180}
-{\fontsize{2.5cm}{1em}\selectfont %s}
+{\fontsize{1.7cm}{1em}\selectfont %s}
 \end{turn}
 \vspace{1em}\par  
 \hrule
 \vspace{1em}\par  
-{\fontsize{2.5cm}{1em}\selectfont %s}
+{\fontsize{1.7cm}{1em}\selectfont %s}
 \end{center}
 \end{frame}
 """
